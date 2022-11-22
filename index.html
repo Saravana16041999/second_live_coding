@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>second live coding chalange</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+        button {
+            padding: 5px 12px 5px 12px;
+            margin-right: 10px;
+        }
+    </style>
+  <body>
+       <div>
+        <label id="text">Enter <input type="text" id="inputEl"></label>
+       </div>
+       <div class="zoom">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">-</button>
+       </div>
+    <script>
+        const textEl = document.getElementById("text")
+        const inputEl = document.getElementById("inputEl")
+
+        fontSize = 15
+        function zoomIn(){
+            fontSize = fontSize + 2
+            inputEl.style.fontSize=`${fontSize}px`
+            textEl.style.fontSize=`${fontSize}px`
+        };
+        function zoomOut(){
+            fontSize = fontSize - 2
+            inputEl.style.fontSize=`${fontSize}px`
+            textEl.style.fontSize=`${fontSize}px`
+        }
+
+    </script>
+  </body>
+</html>
